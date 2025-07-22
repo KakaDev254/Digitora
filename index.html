@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitora Digital Agency</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="assets/logo2.jpg"
+            alt="Digitora Logo"
+            class="me-2"
+            style="height: 40px"
+          />
+          <span class="fw-bold text-success">Digitora</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div
+            class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0"
+            data-aos="fade-right"
+          >
+            <h1 class="display-5 fw-bold text-success mb-3">
+              Your Digital Partner for Growth
+            </h1>
+            <p class="lead text-muted">
+              We craft impactful websites, powerful marketing campaigns, and
+              eye-catching visuals to boost your brand.
+            </p>
+            <a href="#services" class="btn btn-success btn-lg mt-3"
+              >Explore Our Services</a
+            >
+          </div>
+          <div class="col-lg-5 hero-img text-center" data-aos="fade-left">
+            <img
+              src="assets/hero2.jpg"
+              alt="Digital Agency Work"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="fw-bold text-success">Our Services</h2>
+          <p class="text-muted">
+            We offer a range of digital solutions to elevate your brand and grow
+            your business.
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card shadow-sm h-100 border-0">
+              <div class="card-body text-center">
+                <i class="bx bx-code-alt display-4 text-success mb-3"></i>
+                <h5 class="card-title fw-bold">Web Development</h5>
+                <p class="card-text text-muted">
+                  We build responsive, fast, and SEO-friendly websites tailored
+                  to your needs.
+                </p>
+                <a href="#contact" class="btn btn-outline-success mt-3"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="card shadow-sm h-100 border-0">
+              <div class="card-body text-center">
+                <i class="bx bx-brush display-4 text-success mb-3"></i>
+                <h5 class="card-title fw-bold">Graphic Design</h5>
+                <p class="card-text text-muted">
+                  From logos to social media banners, we create designs that
+                  leave an impression.
+                </p>
+                <a href="#contact" class="btn btn-outline-success mt-3"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="card shadow-sm h-100 border-0">
+              <div class="card-body text-center">
+                <i class="bx bx-bar-chart-alt display-4 text-success mb-3"></i>
+                <h5 class="card-title fw-bold">Digital Marketing</h5>
+                <p class="card-text text-muted">
+                  We grow your online presence with SEO, social media, and ad
+                  campaigns.
+                </p>
+                <a href="#contact" class="btn btn-outline-success mt-3"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="process-section">
+      <h2 class="process-title">Our Approach</h2>
+
+      <!-- SVG Wave Line -->
+      <div class="process-line">
+        <svg
+          class="process-svg"
+          viewBox="0 0 1000 300"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,150 Q250,0 500,150 T1000,150"
+            fill="none"
+            stroke="#80AF81"
+            stroke-width="6"
+          />
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-md-2 col-6 process-step">
+            <div class="step-circle">
+              <i class="bx bx-search-alt"></i>
+            </div>
+            <h5 class="step-title">Discover</h5>
+            <p class="step-desc">
+              We learn about your business, goals, and audience to lay a solid
+              foundation.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-6 process-step">
+            <div class="step-circle">
+              <i class="bx bx-bulb"></i>
+            </div>
+            <h5 class="step-title">Strategize</h5>
+            <p class="step-desc">
+              Crafting a smart digital marketing strategy tailored to your
+              needs.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-6 process-step">
+            <div class="step-circle">
+              <i class="bx bx-paint"></i>
+            </div>
+            <h5 class="step-title">Create</h5>
+            <p class="step-desc">
+              Designing and producing creative campaigns and content that
+              resonate.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-6 process-step">
+            <div class="step-circle">
+              <i class="bx bx-rocket"></i>
+            </div>
+            <h5 class="step-title">Launch</h5>
+            <p class="step-desc">
+              We deploy campaigns across the right digital channels for maximum
+              reach.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-6 process-step">
+            <div class="step-circle">
+              <i class="bx bx-line-chart"></i>
+            </div>
+            <h5 class="step-title">Optimize</h5>
+            <p class="step-desc">
+              Monitoring performance and continuously improving your campaign
+              results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section py-5" id="contact">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Column: Image -->
+          <div class="col-md-6 mb-4 mb-md-0 position-relative">
+            <img
+              src="assets/contact2.jpg"
+              class="img-fluid rounded-4 shadow-lg"
+              alt="Contact Image"
+            />
+            <svg
+              class="position-absolute top-0 start-0 translate-middle opacity-10"
+              width="200"
+              height="200"
+              viewBox="0 0 200 200"
+            >
+              <path
+                fill="#FFA725"
+                d="M38.8,-63.4C49.7,-56.3,58.5,-49.1,64.4,-39.4C70.3,-29.7,73.2,-17.3,74.3,-4.6C75.4,8.1,74.6,20.2,70.7,32C66.8,43.7,59.8,55.2,49.2,61.2C38.5,67.1,24.2,67.5,11.8,61.7C-0.6,55.9,-11.2,43.9,-22.5,36.3C-33.8,28.7,-45.7,25.6,-52.3,18.2C-58.8,10.8,-60.1,-0.9,-57.3,-12.3C-54.6,-23.6,-47.9,-34.5,-38.8,-42.6C-29.7,-50.7,-18.2,-56,-5.7,-54.5C6.7,-53.1,13.3,-44.2,38.8,-63.4Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="col-md-6">
+            <h2 class="mb-3 fw-bold text-uppercase" style="color: #06d001">
+              Get in Touch
+            </h2>
+            <p class="mb-4 text-muted">
+              Want to collaborate, consult, or say hi? We'd love to hear from
+              you!
+            </p>
+            <form>
+              <div class="mb-3 input-group">
+                <span class="input-group-text bg-white border-end-0"
+                  ><i class="bx bx-user" style="color: #ffa725"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control border-start-0"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3 input-group">
+                <span class="input-group-text bg-white border-end-0"
+                  ><i class="bx bx-envelope" style="color: #ffa725"></i
+                ></span>
+                <input
+                  type="email"
+                  class="form-control border-start-0"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="mb-3 input-group">
+                <span class="input-group-text bg-white border-end-0"
+                  ><i class="bx bx-message-dots" style="color: #ffa725"></i
+                ></span>
+                <textarea
+                  class="form-control border-start-0"
+                  rows="4"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn px-4 py-2 rounded-pill text-white"
+                style="background-color: #ffa725"
+              >
+                Send Message <i class="bx bx-send ms-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section class="py-5" style="background-color: #d6efd8">
+      <div class="container">
+        <h2 class="text-center mb-4" style="color: #1a5319">
+          What Our Clients Say
+        </h2>
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active text-center">
+              <img
+                src="https://via.placeholder.com/80"
+                class="rounded-circle mb-3"
+                alt="Client 1"
+              />
+              <blockquote class="blockquote">
+                <p class="mb-0">
+                  Digitora transformed our online presence—professional, timely,
+                  and creative!
+                </p>
+                <footer class="blockquote-footer mt-2">
+                  Ann K., CEO of GreenTech
+                </footer>
+              </blockquote>
+            </div>
+
+            <div class="carousel-item text-center">
+              <img
+                src="https://via.placeholder.com/80"
+                class="rounded-circle mb-3"
+                alt="Client 2"
+              />
+              <blockquote class="blockquote">
+                <p class="mb-0">
+                  Outstanding design and digital marketing strategies. Highly
+                  recommend!
+                </p>
+                <footer class="blockquote-footer mt-2">
+                  David M., Founder of SwiftAds
+                </footer>
+              </blockquote>
+            </div>
+
+            <!-- Add more testimonials here -->
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon"
+              style="filter: invert(1)"
+            ></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon"
+              style="filter: invert(1)"
+            ></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5" style="background-color: #1a5319">
+      <div class="container text-white">
+        <div class="row text-center">
+          <div class="col-md-3 mb-4">
+            <h2><span class="counter" data-target="150">0</span>+</h2>
+            <p>Projects Completed</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h2><span class="counter" data-target="120">0</span>+</h2>
+            <p>Satisfied Clients</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h2><span class="counter" data-target="4">0</span>+</h2>
+            <p>Years Experience</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h2><span class="counter" data-target="10">0</span>+</h2>
+            <p>Team Members</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Digitora Footer -->
+    <footer class="pt-5 text-white" style="background-color: #1a5319">
+      <div class="container">
+        <div class="row">
+          <!-- About -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold" style="color: #d6efd8">Digitora</h5>
+            <p class="text-light">
+              Empowering businesses through strategic digital marketing,
+              branding, and innovation. Let’s grow your digital footprint
+              together.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-facebook-circle"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-linkedin-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-2 mb-4">
+            <h6 class="fw-bold" style="color: #d6efd8">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold" style="color: #d6efd8">Our Services</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Brand Strategy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >SEO Optimization</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >UI/UX Design</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold" style="color: #d6efd8">Newsletter</h6>
+            <p class="text-light">
+              Stay updated with our latest trends and offers.
+            </p>
+            <form>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address"
+                  style="border: none; border-radius: 0.375rem 0 0 0.375rem"
+                />
+                <button
+                  class="btn"
+                  style="
+                    background-color: #80af81;
+                    color: white;
+                    border-radius: 0 0.375rem 0.375rem 0;
+                  "
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+
+        <div class="d-flex justify-content-between flex-wrap text-light pb-3">
+          <p class="mb-0">&copy; 2025 Digitora. All rights reserved.</p>
+          <p class="mb-0">
+            <a href="#" class="text-decoration-none text-light me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-decoration-none text-light"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const counters = document.querySelectorAll(".counter");
+      counters.forEach((counter) => {
+        counter.innerText = "0";
+        const updateCounter = () => {
+          const target = +counter.getAttribute("data-target");
+          const current = +counter.innerText;
+          const increment = target / 100;
+
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 25);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCounter();
+      });
+    </script>
+  </body>
+</html>

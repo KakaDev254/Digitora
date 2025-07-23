@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Digitora</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #1a5319;
+        --secondary: #80af81;
+        --light: #d6efd8;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #ffffff;
+        color: var(--primary);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .section-title h2 {
+        font-weight: bold;
+        color: var(--primary);
+      }
+
+      .portfolio-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .portfolio-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .portfolio-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .portfolio-overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(26, 83, 25, 0.85);
+        color: var(--light);
+        width: 100%;
+        padding: 1rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .portfolio-card:hover .portfolio-overlay {
+        transform: translateY(0);
+      }
+
+      .portfolio-overlay h5 {
+        margin: 0;
+        font-weight: bold;
+      }
+
+      .portfolio-overlay p {
+        font-size: 0.9rem;
+      }
+
+      .btn-filter {
+        border: none;
+        background-color: var(--secondary);
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        margin: 0 0.25rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-filter:hover,
+      .btn-filter.active {
+        background-color: var(--primary);
+      }
+
+      .filter-btns {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="assets/logo2.jpg"
+            alt="Digitora Logo"
+            class="me-2"
+            style="height: 40px"
+          />
+          <span class="fw-bold text-success">Digitora</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Portfolio Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Portfolio</h2>
+          <p class="text-muted">
+            See how we've helped brands grow with impactful digital solutions.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-btns">
+          <button class="btn-filter active" data-filter="all">All</button>
+          <button class="btn-filter" data-filter="branding">Branding</button>
+          <button class="btn-filter" data-filter="web">Web Design</button>
+          <button class="btn-filter" data-filter="marketing">Marketing</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="row g-4" id="portfolioGrid">
+          <!-- Portfolio Item -->
+          <div class="col-md-4 portfolio-item branding">
+            <div class="portfolio-card">
+              <img src="assets/nuvana.PNG" alt="Brand Project" />
+              <div class="portfolio-overlay">
+                <h5>E-commerce Website</h5>
+                <p>Complete e-commerce website.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 portfolio-item web">
+            <div class="portfolio-card">
+              <img src="assets/auto.PNG" alt="Web Design Project" />
+              <div class="portfolio-overlay">
+                <h5>Website design</h5>
+                <p>Modern responsive website for a car autocollection.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 portfolio-item marketing">
+            <div class="portfolio-card">
+              <img
+                src="assets/domenico-loia-hGV2TfOh0ns-unsplash.jpg"
+                alt="Marketing Project"
+              />
+              <div class="portfolio-overlay">
+                <h5>SEO & Ads</h5>
+                <p>Targeted campaigns that increased traffic by 70%.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more items as needed -->
+        </div>
+      </div>
+    </section>
+    <footer class="pt-5 text-white" style="background-color: #1a5319">
+      <div class="container">
+        <div class="row">
+          <!-- About -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold" style="color: #d6efd8">Digitora</h5>
+            <p class="text-light">
+              Empowering businesses through strategic digital marketing,
+              branding, and innovation. Let’s grow your digital footprint
+              together.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-facebook-circle"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="bx bxl-linkedin-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-2 mb-4">
+            <h6 class="fw-bold" style="color: #d6efd8">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold" style="color: #d6efd8">Our Services</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Brand Strategy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >SEO Optimization</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >UI/UX Design</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold" style="color: #d6efd8">Newsletter</h6>
+            <p class="text-light">
+              Stay updated with our latest trends and offers.
+            </p>
+            <form>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address"
+                  style="border: none; border-radius: 0.375rem 0 0 0.375rem"
+                />
+                <button
+                  class="btn"
+                  style="
+                    background-color: #80af81;
+                    color: white;
+                    border-radius: 0 0.375rem 0.375rem 0;
+                  "
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+
+        <div class="d-flex justify-content-between flex-wrap text-light pb-3">
+          <p class="mb-0">&copy; 2025 Digitora. All rights reserved.</p>
+          <p class="mb-0">
+            <a href="#" class="text-decoration-none text-light me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-decoration-none text-light"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Portfolio filtering
+      const filterButtons = document.querySelectorAll(".btn-filter");
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelector(".btn-filter.active")
+            .classList.remove("active");
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+          portfolioItems.forEach((item) => {
+            item.style.display =
+              filter === "all" || item.classList.contains(filter)
+                ? "block"
+                : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

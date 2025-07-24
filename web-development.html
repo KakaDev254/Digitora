@@ -16,7 +16,10 @@
       :root {
         --brand-green: #4caf50;
         --brand-light-green: #d4f5e0;
+        --brand-orange: #ff7a00; /* ← add this */
+        --brand-red: #d13c3c; /* ← add this */
         --text-dark: #212529;
+        --transition: 0.3s ease; /* ← add this */
       }
 
       body {
@@ -118,22 +121,6 @@
         text-align: center;
       }
 
-      .btn {
-        display: inline-block;
-        text-align: center;
-        padding: 0.75rem 1.5rem;
-        background: var(--brand-orange);
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: background var(--transition);
-        margin-top: auto;
-      }
-
-      .btn:hover {
-        background: var(--brand-red);
-      }
-
       @media (max-width: 768px) {
         .packages-grid {
           flex-direction: column;
@@ -222,7 +209,7 @@
               <li>Responsive Design</li>
               <li>Contact Form</li>
             </ul>
-            <a href="#" class="btn">Get Started</a>
+            <a href="#" class="btn btn-brand">Get Started</a>
           </div>
 
           <!-- Package 2 -->
@@ -234,7 +221,7 @@
               <li>SEO Optimized</li>
               <li>Blog Integration</li>
             </ul>
-            <a href="#" class="btn">Get Started</a>
+            <a href="#" class="btn btn-brand">Get Started</a>
           </div>
 
           <!-- Package 3 -->
@@ -246,7 +233,7 @@
               <li>E-commerce Integration</li>
               <li>Custom Features</li>
             </ul>
-            <a href="#" class="btn">Get Started</a>
+            <a href="#" class="btn btn-brand">Get Started</a>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Graphic Design Services</title>
+    <title>Graphic Design Services | Digitora</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -17,14 +17,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="style.css" />
     <style>
       :root {
         --dark-green: #26cd87;
         --primary-green: #52ae85;
         --accent-green: #40916c;
         --light-green: #52b788;
-        --bg-light: #d8f3dc;
+        --bg-light: #ffffff;
       }
 
       * {
@@ -40,8 +39,8 @@
       }
 
       header {
-        background-color: var(--primary-green);
-        color: white;
+        background: linear-gradient(to right, #f0fdf4, #d6efd8);
+        color: #075e15;
         padding: 80px 20px;
         text-align: center;
       }
@@ -55,6 +54,77 @@
         font-size: 1.2rem;
       }
 
+      .cube-container {
+        perspective: 1000px;
+        width: 250px;
+        height: 250px;
+      }
+
+      .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotateCube 10s infinite linear;
+        transform-origin: center;
+      }
+
+      .face {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff;
+        background: rgba(95, 134, 112, 0.5);
+        border: 1.5px solid rgba(78, 115, 93, 0.3);
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(95, 134, 112, 0.2);
+        backdrop-filter: blur(4px);
+      }
+
+      .front {
+        transform: rotateY(0deg) translateZ(125px);
+        background-color: rgba(95, 134, 112, 0.4);
+      }
+
+      .back {
+        transform: rotateY(180deg) translateZ(125px);
+        background-color: rgba(79, 119, 84, 0.4);
+      }
+
+      .right {
+        transform: rotateY(90deg) translateZ(125px);
+        background-color: rgba(111, 168, 120, 0.4);
+      }
+
+      .left {
+        transform: rotateY(-90deg) translateZ(125px);
+        background-color: rgba(58, 96, 73, 0.4);
+      }
+
+      .top {
+        transform: rotateX(90deg) translateZ(125px);
+        background-color: rgba(115, 162, 107, 0.4);
+      }
+
+      .bottom {
+        transform: rotateX(-90deg) translateZ(125px);
+        background-color: rgba(88, 143, 103, 0.4);
+      }
+
+      @keyframes rotateCube {
+        0% {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        100% {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+
       .features {
         display: flex;
         flex-wrap: wrap;
@@ -63,7 +133,7 @@
       }
 
       .feature-card {
-        background: white;
+        background: #ffffff;
         border-radius: 20px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         width: 300px;
@@ -86,88 +156,8 @@
         color: #444;
       }
 
-      .packages {
-        background-color: var(--primary-green);
-        color: white;
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      .packages h2 {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-      }
-
-      .package-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .package {
-        background-color: white;
-        color: var(--dark-green);
-        border-radius: 24px;
-        margin: 20px;
-        padding: 40px 30px;
-        width: 280px;
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-        position: relative;
-      }
-
-      .package:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-      }
-
-      .price {
-        font-size: 2rem;
-        font-weight: bold;
-        color: var(--accent-green);
-        margin-bottom: 20px;
-      }
-
-      .package h3 {
-        margin-bottom: 15px;
-        color: var(--primary-green);
-      }
-
-      .package ul {
-        list-style: none;
-        text-align: left;
-        margin-bottom: 20px;
-      }
-
-      .package ul li {
-        margin-bottom: 8px;
-        padding-left: 20px;
-        position: relative;
-      }
-
-      .package ul li::before {
-        content: "✔";
-        position: absolute;
-        left: 0;
-        color: var(--accent-green);
-      }
-
-      .package button {
-        background-color: var(--accent-green);
-        color: white;
-        border: none;
-        padding: 12px 24px;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .package button:hover {
-        background-color: var(--light-green);
-      }
-
       @media (max-width: 768px) {
-        .features,
-        .package-cards {
+        .features {
           flex-direction: column;
           align-items: center;
         }
@@ -175,9 +165,66 @@
         header h1 {
           font-size: 2.2rem;
         }
+
+        .cube-container {
+          width: 200px;
+          height: 200px;
+        }
+
+        .face {
+          width: 200px;
+          height: 200px;
+          font-size: 1rem;
+        }
+
+        .feature-card {
+          width: 90%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        header {
+          padding: 60px 10px;
+        }
+
+        .cube-container {
+          width: 180px;
+          height: 180px;
+        }
+
+        .face {
+          width: 180px;
+          height: 180px;
+          font-size: 0.9rem;
+        }
+
+        .feature-card {
+          width: 90%;
+          padding: 20px;
+        }
+
+        .feature-card h3 {
+          font-size: 1.2rem;
+        }
+
+        .feature-card p {
+          font-size: 0.95rem;
+        }
+
+        footer form .input-group {
+          flex-direction: column;
+        }
+
+        footer form input,
+        footer form button {
+          width: 100% !important;
+          border-radius: 0.375rem !important;
+          margin-top: 8px;
+        }
       }
     </style>
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
@@ -205,26 +252,52 @@
               <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#sevices">Services</a>
+              <a class="nav-link" href="index.html#services">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Contact</a>
+              <a class="nav-link" href="index.html#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <header>
-      <h1>Graphic Design Services</h1>
-      <p>
-        Transforming ideas into powerful visuals with creativity and precision
-      </p>
+
+    <!-- Graphic Design Header with 3D Cube -->
+    <header class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="display-5 fw-bold mb-3 text-success">
+              Graphic Design Services
+            </h1>
+            <p class="lead text-dark">
+              Transforming ideas into powerful visuals with creativity and
+              precision.
+            </p>
+          </div>
+          <div
+            class="col-lg-6 d-flex justify-content-center align-items-center"
+          >
+            <div class="cube-container">
+              <div class="cube">
+                <div class="face front">Logo Design</div>
+                <div class="face back">Branding</div>
+                <div class="face right">UI/UX</div>
+                <div class="face left">Illustration</div>
+                <div class="face top">Mockups</div>
+                <div class="face bottom">Posters</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section class="features">
+    <!-- Services Section -->
+    <section class="features container">
       <div class="feature-card">
         <h3>Logo Design</h3>
         <p>
@@ -244,46 +317,10 @@
       </div>
     </section>
 
-    <section class="packages">
-      <h2>Our Design Packages</h2>
-      <div class="package-cards">
-        <div class="package">
-          <div class="price">KES 5,000</div>
-          <h3>Starter Kit</h3>
-          <ul>
-            <li>1 Logo Design</li>
-            <li>2 Social Media Posts</li>
-            <li>1 Revision</li>
-          </ul>
-          <button>Get Started</button>
-        </div>
-        <div class="package">
-          <div class="price">KES 10,000</div>
-          <h3>Professional Kit</h3>
-          <ul>
-            <li>Logo + Brand Colors</li>
-            <li>5 Social Media Posts</li>
-            <li>3 Revisions</li>
-          </ul>
-          <button>Choose Plan</button>
-        </div>
-        <div class="package">
-          <div class="price">KES 20,000</div>
-          <h3>Ultimate Kit</h3>
-          <ul>
-            <li>Full Branding</li>
-            <li>10 Social Media Posts</li>
-            <li>Unlimited Revisions</li>
-          </ul>
-          <button>Subscribe</button>
-        </div>
-      </div>
-    </section>
-    <!-- Digitora Footer -->
+    <!-- Footer -->
     <footer class="pt-5 text-white" style="background-color: #1a5319">
       <div class="container">
         <div class="row">
-          <!-- About -->
           <div class="col-md-4 mb-4">
             <h5 class="fw-bold" style="color: #d6efd8">Digitora</h5>
             <p class="text-light">
@@ -307,7 +344,6 @@
             </div>
           </div>
 
-          <!-- Quick Links -->
           <div class="col-md-2 mb-4">
             <h6 class="fw-bold" style="color: #d6efd8">Quick Links</h6>
             <ul class="list-unstyled">
@@ -328,7 +364,6 @@
             </ul>
           </div>
 
-          <!-- Services -->
           <div class="col-md-3 mb-4">
             <h6 class="fw-bold" style="color: #d6efd8">Our Services</h6>
             <ul class="list-unstyled">
@@ -355,7 +390,6 @@
             </ul>
           </div>
 
-          <!-- Newsletter -->
           <div class="col-md-3 mb-4">
             <h6 class="fw-bold" style="color: #d6efd8">Newsletter</h6>
             <p class="text-light">
@@ -386,7 +420,6 @@
         </div>
 
         <hr class="border-light" />
-
         <div class="d-flex justify-content-between flex-wrap text-light pb-3">
           <p class="mb-0">&copy; 2025 Digitora. All rights reserved.</p>
           <p class="mb-0">
@@ -400,6 +433,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
